@@ -6,11 +6,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewCompleted: false,
+      viewActive: false,
       songList: [],
       modal: false,
       activeItem: {
         title: "",
+        genre: "",
+        length: "",
+        year: "",
         artist: "",
         active: false,
       },
@@ -64,10 +67,10 @@ class App extends Component {
 
   displayCompleted = (status) => {
     if (status) {
-      return this.setState({ viewCompleted: true });
+      return this.setState({ viewActive: true });
     }
 
-    return this.setState({ viewCompleted: false });
+    return this.setState({ viewActive: false });
   };
 
   renderTabList = () => {
@@ -75,13 +78,13 @@ class App extends Component {
       <div className="nav nav-tabs">
         <span
           onClick={() => this.displayCompleted(true)}
-          className={this.state.viewCompleted ? "nav-link active" : "nav-link"}
+          className={this.state.viewActive ? "nav-link active" : "nav-link"}
         >
           Active
         </span>
         <span
           onClick={() => this.displayCompleted(false)}
-          className={this.state.viewCompleted ? "nav-link" : "nav-link active"}
+          className={this.state.viewActive ? "nav-link" : "nav-link active"}
         >
           Inactive
         </span>
@@ -90,9 +93,9 @@ class App extends Component {
   };
 
   renderItems = () => {
-    const { viewCompleted } = this.state;
+    const { viewActive } = this.state;
     const newItems = this.state.songList.filter(
-      (item) => item.completed === viewCompleted
+      (item) => item.active === viewActive
     );
 
     return newItems.map((item) => (
@@ -102,7 +105,7 @@ class App extends Component {
       >
         <span
           className={`song-title mr-2 ${
-            this.state.viewCompleted ? "completed-song" : ""
+            this.state.viewActive ? "completed-song" : ""
           }`}
           title={item.title}
         >
