@@ -51,7 +51,7 @@ export default class CustomModal extends Component {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="artist">Song Artist</Label>
+              <Label for="artist">Artist</Label>
               <Input
                 type="text"
                 id="artist"
@@ -59,6 +59,39 @@ export default class CustomModal extends Component {
                 value={this.state.activeItem.artist}
                 onChange={this.handleChange}
                 placeholder="Enter Song Artist"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="genre">Genre</Label>
+              <Input
+                type="text"
+                id="genre"
+                name="genre"
+                value={this.state.activeItem.genre}
+                onChange={this.handleChange}
+                placeholder="Enter Song Genre"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="length">Length</Label>
+              <Input
+                type="number"
+                id="length"
+                name="length"
+                value={this.state.activeItem.length}
+                onChange={this.handleChange}
+                placeholder="Enter Song Length (Seconds)"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="year">Year</Label>
+              <Input
+                type="date"
+                id="year"
+                name="year"
+                value={this.state.activeItem.year}
+                onChange={this.handleChange}
+                placeholder="Enter Song Year"
               />
             </FormGroup>
             <FormGroup check>
