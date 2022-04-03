@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# Getting Started with Music Library API  (Django Rest Framework - backend)
+
+### `cd  backend`
+
+### `pipenv install`
+
+### `pipenv shell`
+
+### `python manage.py runserver`
+
+Runs the API in development mode.\
+You will be able to navigate the API at: http://127.0.0.1:8000/api/<model>
+i.e http://127.0.0.1:8000/api/songs
+
+# Getting Started with Music Library App (frontend)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Bootstrapped with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +86,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
