@@ -77,12 +77,14 @@ class App extends Component {
     return (
       <div className="nav nav-tabs">
         <span
+          style={{cursor:"pointer"}}
           onClick={() => this.displayCompleted(true)}
           className={this.state.viewActive ? "nav-link active" : "nav-link"}
         >
           Active
         </span>
         <span
+          style={{cursor:"pointer"}}
           onClick={() => this.displayCompleted(false)}
           className={this.state.viewActive ? "nav-link" : "nav-link active"}
         >
@@ -94,6 +96,9 @@ class App extends Component {
 
   renderItems = () => {
     const { viewActive } = this.state;
+    const btnstyle = {
+      marginRight: "10px"
+    };
     const newItems = this.state.songList.filter(
       (item) => item.active === viewActive
     );
@@ -112,13 +117,14 @@ class App extends Component {
           {item.title}
         </span>
         <span>
-          <button
-            className="btn btn-secondary mr-2"
+          <button 
+            style={{marginRight:"10px"}}
+            className="btn btn-secondary"
             onClick={() => this.editItem(item)}
           >
             Edit
           </button>
-          <button
+          <button 
             className="btn btn-danger"
             onClick={() => this.handleDelete(item)}
           >
@@ -138,7 +144,7 @@ class App extends Component {
             <div className="card p-3">
               <div className="mb-4">
                 <button
-                  className="btn btn-primary"
+                  className="btn-margin btn btn-primary"
                   onClick={this.createItem}
                 >
                   Add Song
