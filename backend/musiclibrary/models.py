@@ -1,5 +1,6 @@
 from django.db import models
 
+DEFAULT_ALBUM = 2
 class Song(models.Model):
     title = models.CharField(max_length=200)
     artist = models.CharField(max_length=200)
@@ -11,6 +12,10 @@ class Song(models.Model):
 
     def __str__(self):
         return self.title
+
+    
+
+    
 
 class Album(models.Model):
     album_title = models.CharField(max_length=200)
