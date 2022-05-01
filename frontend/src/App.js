@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
+import { Button, Row } from "reactstrap";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewActive: false,
+      viewActive: true,
       songList: [],
       modal: false,
       activeItem: {
@@ -140,7 +141,7 @@ class App extends Component {
       <main className="container">
         <h1 className="text-white text-uppercase text-center my-4">Music Library app</h1>
         <div className="row">
-          <div className="col-md-6 col-sm-10 mx-auto p-0">
+          <div className="col-md-5 col-sm-10 mx-auto p-0 mr-1">
             <div className="card p-3">
               <div className="mb-4">
                 <button
@@ -156,7 +157,33 @@ class App extends Component {
               </ul>
             </div>
           </div>
+          <div className="col-md-5 col-sm-10 mx-auto p-0">
+            <div className="card p-3">
+              <div className="mb-4">
+                <h2>Player</h2>
+              </div>
+              <div className="mb-4">
+                <h3>Song image placeholder</h3>
+              </div>
+              <div class="progress-bar"></div>
+              <row>
+                <button
+                  className="btn btn-secondary">
+                    Previous
+                </button>
+                <button
+                  className="btn btn-primary">
+                    Play/Pause
+                </button>
+                <button
+                className="btn btn-secondary">
+                  Next
+                </button>
+              </row>
+            </div>
+          </div>
         </div>
+        
         {this.state.modal ? (
           <Modal
             activeItem={this.state.activeItem}
@@ -165,6 +192,7 @@ class App extends Component {
           />
         ) : null}
       </main>
+      
     );
   }
 }
