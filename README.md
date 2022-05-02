@@ -1,90 +1,62 @@
-# Getting Started with Music Library API  (Django Rest Framework - backend)
 
-### `cd  backend`
+# Music Library
 
-### `pipenv install`
+A music web app to share content freely, focusing on royalty-free music that can be distributed and shared as well as the ability for users to uplaod their own content. Future is to support lossless audio and Dolby Atmos® music files.
 
-### `pipenv shell`
 
-### `python manage.py runserver`
+## Features
 
-Runs the API in development mode.\
-You will be able to navigate the API at: http://127.0.0.1:8000/api/<model>
-i.e http://127.0.0.1:8000/api/songs
+- Django Rest framework/React
+- Music Library
+- Interactive Music Player
+- Cross platform
 
-# Getting Started with Music Library App (frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Run Locally
 
-## Bootstrapped with Create React App
+Clone the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+  git clone https://github.com/sgs22/django-react-musiclibrary.git
+```
 
-## Available Scripts
+Go to the project directory
 
-In the project directory, you can run:
+```bash
+  cd backend
+```
+Install backend dependencies
 
-### `npm start`
+```bash
+  pipenv install 
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Activate shell
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  pipenv shell 
+```
 
-### `npm test`
+Start local django server (http://127.0.0.1:8000/api/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  python manage.py runserver 
+```
+Go to the frontend project directory
 
-### `npm run build`
+```bash
+  cd frontend
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the server (http://localhost:3000/)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+```bash
+  npm run start
+```
 
