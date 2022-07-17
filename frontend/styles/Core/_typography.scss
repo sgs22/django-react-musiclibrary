@@ -35,7 +35,7 @@ $font-weight-heading: 600;
 @mixin bodyTextStyle {
   font-size: $body-font-size-sm;
   font-weight: 400;
-  color: $black-body;
+  color: $white-body;
   font-family: $font-primary;
   line-height: $line-height;
   letter-spacing: normal;
@@ -89,6 +89,8 @@ h3 {
   @include h3Style;
 }
 
-p {
+p,
+a,
+ul {
   @include bodyTextStyle;
 }

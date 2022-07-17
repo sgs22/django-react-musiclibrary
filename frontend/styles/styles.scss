@@ -1,5 +1,10 @@
+@import './common.scss';
+
 //Core
-@import './Core/base';
-@import './Core/colors';
-@import './Core/mixin';
-@import './Core/typography';
+@import './Core/base.scss';
+@import './Core/colors.scss';
+@import './Core/typography.scss';
+@import './Core/mixin.scss';
+
+//Components
+@import './Components/nav.scss';

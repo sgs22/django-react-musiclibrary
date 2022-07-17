@@ -1,5 +1,3 @@
-@import './include-media';
-
 html,
 body,
 div,
@@ -114,7 +112,6 @@ body {
 
 ol,
 ul {
-  @include bodyTextStyles;
   list-style: none;
   margin-bottom: 0;
 }
@@ -154,15 +151,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
-$breakpoints: (
-  'screen-xs': 480px,
-  'screen-sm': 768px,
-  'screen-md': 991px,
-  'screen-tablet': 1180px,
-  'screen-lg': 1366px,
-  'screen-xl': 1600px,
-);
 
 // @include media('>=screen-md') {
 //   body {
