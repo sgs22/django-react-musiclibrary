@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins_Bold';
+  src: url('/public/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins_Light';
+  src: url('/public/fonts/Poppins-Light.ttf') format('truetype');
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+//text variables
+
+$fallback: 'open-sarif';
+$font-primary: 'Poppins', $fallback;
+$font-heading: 'Poppins_Bold', $fallback;
+$font-light: 'Poppins_Light', $fallback;
+$line-height: 1.2;
+$body-font-size-sm: 1.4rem;
+$body-font-size: 1.6rem;
+$h1-font-size-sm: 2.5rem;
+$h1-font-size: 5rem;
+$h2-font-size-sm: 2rem;
+$h2-font-size: 4rem;
+$h3-font-size-sm: 1.5rem;
+$h3-font-size: 3rem;
+$font-weight-heading: 600;
+
+@mixin bodyTextStyle {
+  font-size: $body-font-size-sm;
+  font-weight: 400;
+  color: $black-body;
+  font-family: $font-primary;
+  line-height: $line-height;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+
+  @include media('>=screen-md') {
+    font-size: $body-font-size;
+  }
+}
+
+@mixin h1Style {
+  font-size: $h1-font-size-sm;
+  color: $black-body;
+  font-family: $font-heading;
+
+  @include media('>=screen-md') {
+    font-size: $h1-font-size;
+  }
+}
+
+@mixin h2Style {
+  font-size: $h2-font-size-sm;
+  color: $black-body;
+  font-family: $font-heading;
+  text-transform: capitalize;
+
+  @include media('>=screen-md') {
+    font-size: $h2-font-size;
+  }
+}
+
+@mixin h3Style {
+  font-size: $h3-font-size-sm;
+  color: $black-body;
+  font-family: $font-heading;
+
+  @include media('>=screen-md') {
+    font-size: $h3-font-size;
+  }
+}
+
+h1 {
+  @include h1Style;
+}
+
+h2 {
+  @include h2Style;
+}
+
+h3 {
+  @include h3Style;
+}
+
+p {
+  @include bodyTextStyle;
+}

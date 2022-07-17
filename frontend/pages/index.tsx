@@ -12,7 +12,9 @@ const Home: NextPage = () => {
 
       <header></header>
 
-      <main></main>
+      <main>
+        <h1>Music Library</h1>
+      </main>
 
       <footer></footer>
     </>
