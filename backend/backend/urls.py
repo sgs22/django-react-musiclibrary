@@ -21,6 +21,8 @@ from musiclibrary import views
 router = routers.DefaultRouter()
 router.register(r'songs', views.SongView, 'songs')
 router.register(r'albums', views.AlbumView, 'albums')
+router.register(r'playlists', views.PlaylistView, 'playlists')
+router.register(r'users', views.UserView, 'users')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
