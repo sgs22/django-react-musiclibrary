@@ -60,3 +60,8 @@ Start the server (http://localhost:3000/)
   npm run start
 ```
 
+## TODO
+
+- add link to song path from playlist over song id view.
+- create basic media player to play song selected.
+
