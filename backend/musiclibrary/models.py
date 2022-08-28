@@ -8,7 +8,8 @@ class Track(models.Model):
     length = models.IntegerField(blank=True, null=True)
     year = models.DateField(blank=True, null=True)
     active = models.BooleanField(default=True)
-    album = models.ForeignKey('Album', on_delete=models.CASCADE)
+    album = models.ForeignKey('Album',blank=True, null=True, on_delete=models.CASCADE)
+    track_file = models.FileField(blank=True)
 
     def __str__(self):
         return self.title
@@ -35,3 +36,4 @@ class PlaylistTrack(models.Model):
 
     class Meta:
         ordering = ['order']
+
