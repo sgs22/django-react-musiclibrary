@@ -10,6 +10,7 @@ django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
 pillow = "*"
+tinytag = "*"
 
 [requires]
 python_version = "3.9"
