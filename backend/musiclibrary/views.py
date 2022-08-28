@@ -2,12 +2,12 @@ from django.shortcuts import render
 
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-from .serializers import SongSerializer, AlbumSerializer, PlaylistSerializer, UserSerializer
-from .models import Song, Album, Playlist
+from .serializers import TrackSerializer, AlbumSerializer, PlaylistSerializer, UserSerializer
+from .models import Track, Album, Playlist
 
 class SongView(viewsets.ModelViewSet):
-    serializer_class = SongSerializer
-    queryset = Song.objects.all()
+    serializer_class = TrackSerializer
+    queryset = Track.objects.all()
 
 class AlbumView(viewsets.ModelViewSet):
     serializer_class = AlbumSerializer

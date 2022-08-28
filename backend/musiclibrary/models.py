@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Song(models.Model):
+class Track(models.Model):
     title = models.CharField(max_length=200)
     artist = models.CharField(max_length=200)
     genre = models.CharField(max_length=200, blank=True, null=True)
@@ -25,12 +25,12 @@ class Album(models.Model):
 
 class Playlist(models.Model):
     playlist_title = models.CharField(max_length=120)
-    songs = models.ManyToManyField(Song, through='PlaylistTrack')
+    tracks = models.ManyToManyField(Track, through='PlaylistTrack')
 
 
 class PlaylistTrack(models.Model):
     playlist = models.ForeignKey(Playlist, on_delete=models.CASCADE)
-    song = models.ForeignKey(Song, on_delete=models.CASCADE)
+    track = models.ForeignKey(Track, on_delete=models.CASCADE)
     order = models.IntegerField()
 
     class Meta:

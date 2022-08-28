@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Song, Album, Playlist, PlaylistTrack
+from .models import Track, Album, Playlist, PlaylistTrack
 
 class SongAdmin(admin.ModelAdmin):
     list_display = ('title', 'artist', 'genre', 'length', 'year')
@@ -13,7 +13,7 @@ class PlaylistAdmin(admin.ModelAdmin):
 class PlaylistTrackAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Song, SongAdmin)
+admin.site.register(Track, SongAdmin)
 admin.site.register(Album, AlbumAdmin)
 admin.site.register(Playlist, PlaylistAdmin)
 admin.site.register(PlaylistTrack, PlaylistTrackAdmin)

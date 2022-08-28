@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import Song, Album, Playlist
+from .models import Track, Album, Playlist
 
-class SongSerializer(serializers.ModelSerializer):
+class TrackSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Song
+        model = Track
         fields = '__all__'
 
 class AlbumSerializer(serializers.ModelSerializer):
